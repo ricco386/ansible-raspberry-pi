@@ -1,6 +1,6 @@
 ---
 - name: Set up Raspberry Pi monitoring script
-  copy: "src=raspi-monitor.sh dest={{ rpi_monitor_script }} owner=root group=root mode=0755"
+  copy: "src=raspi-monitor dest={{ rpi_monitor_script }} owner=root group=root mode=0755"
   become: true
   become_user: root
   tags: monitoring-script

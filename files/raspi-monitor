@@ -1,10 +1,10 @@
 #!/bin/sh
  
-# Script for Monitoring a Raspberry Pi with Zabbix
+# Script for Monitoring a Raspberry Pi hardware status
 # 2013 Bernhard Linz
 # Bernhard@znil.de / http://znil.net
 #
-# Simplified by RicCo / @ricco386
+# Improoved by RicCo / @ricco386
  
 case "$1" in
         boardversion)
@@ -44,7 +44,9 @@ case "$1" in
                 vcgencmd get_mem gpu | tr -d "gpu=" | tr -d "M"
                 ;;
         *)
-                echo "Usage: $N {boardversion|boardrevision|boardserialnumber|firmwareversion|cpuvoltage|cpuclock|cpumem|cputemp|gpumem}" >&2
+		echo "Script for Monitoring a Raspberry Pi hardware status.\n"
+		echo "This script doesn't need super-user privileges.\n" 
+		echo "Usage:\n$0 {boardversion|boardrevision|boardserialnumber|firmwareversion|cpuvoltage|cpuclock|cpumem|cputemp|gpumem}" >&2
 esac
 
 exit 0
